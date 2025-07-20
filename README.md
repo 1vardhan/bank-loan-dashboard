@@ -1,61 +1,92 @@
- 🏦 Bank Loan Portfolio Analysis Dashboard
+ # 🏦 Bank Loan Portfolio Analysis Dashboard + Machine Learning
 
- 📊 Project Overview
+## 📊 Project Overview
 
-This project helps banking institutions and financial analysts monitor, evaluate, and improve lending operations by providing:
+This project empowers banking institutions and financial analysts to **monitor, evaluate, and optimize lending operations** using both **business intelligence (Power BI + SQL)** and **predictive analytics (Machine Learning)**.
 
-- Key KPIs like total loan applications, funded amount, and repayments
-- Segmentation of good vs bad loans
-- Visual trends by geography, loan purpose, employment length, and term
-- DTI and interest rate analysis to assess risk
-- Month-over-Month performance tracking
-- Optional machine learning models for loan default prediction and customer segmentation
+### ✅ Key Capabilities:
+- Business insights through **interactive dashboards**
+- **Classification of good vs. bad loans**
+- **ML model to predict default risk**
+- Segment-wise performance metrics and geographic analysis
 
+---
 
-💡 Problem Statement
+## 💡 Problem Statement
 
-Banks often deal with large volumes of loan data but struggle to:
+Banks often struggle with:
+- Identifying **high-risk borrowers early**
+- **Predicting loan default** to reduce financial losses
+- Understanding **borrower profiles and behavior**
+- Optimizing lending strategies across regions and products
 
-- Identify high-risk borrowers early
-- Predict default rates and cash flow issues
-- Understand which borrower profiles are most profitable
-- Optimize regional lending and product strategy
+---
 
+## 🚀 Features
 
+### 🔹 Power BI Dashboard
+- **KPI Cards:** Total Loan Applications, Funded Amount, Received Amount, Avg. Interest Rate, Avg. DTI
+- **Line Charts:** Application and Repayment Trends (Month-over-Month)
+- **Donut/Bar Charts:** Loan Purpose, Term, Employment Length
+- **Maps:** Lending distribution by state
+- **Treemaps:** Home Ownership Segmentation
+- **Drilldown Table:** Loan-level record inspection
 
- 🚀 Features
+### 🔹 SQL Data Pipeline
+- All backend data cleaning and preparation via **raw SQL queries**
+- Aggregations for:
+  - MTD / PMTD performance
+  - Good vs. Bad Loan Segments
+  - Purpose & region-wise lending behavior
+  - Loan health and recovery insights
 
-🔹 Power BI Dashboard
-- KPI Cards: Total Loan Applications, Funded Amount, Amount Received, Avg. Interest Rate, Avg. DTI
-- Line Charts: Monthly Application and Repayment Trends
-- Donut & Bar Charts: Loan Term, Purpose, Employment Length
-- Maps: Geographic lending distribution by state
-- Treemaps: Home Ownership segmentation
-- Detailed Drilldown Grid for loan-level analysis
+---
 
-🔹 SQL Queries
-All backend data is prepared and filtered using raw SQL for:
-- MTD / PMTD comparisons
-- Good vs Bad Loan Segmentation
-- Purpose-wise and region-wise aggregations
-- Loan health KPIs by status
+## 🧠 Machine Learning Module
 
+### 🔹 Goal:
+Classify loans as **Good (Fully Paid/Current)** or **Bad (Charged Off)** using **Logistic Regression + SMOTE** to address class imbalance and **reduce false negatives**.
 
-🧠 KPIs Tracked
+### 🔹 Steps:
+- Preprocessing of loan data: missing value handling, encoding, scaling
+- **SMOTE applied** to balance bad loan samples
+- **Logistic Regression model** trained and evaluated
+- Model compared with alternatives like XGBoost and Random Forest
+- Logistic Regression chosen for better interpretability and risk sensitivity
 
+### 🔹 Metrics:
+- **Accuracy:** 92%
+- **Recall (Bad Loans):** 95%
+- **Confusion Matrix** indicates high precision and minimized false negatives
 
-| Total Loan Applications
-| Total Funded Amount 
-| Total Amount Received
-| Avg. Interest Rate 
-| Avg. DTI 
-| Good/Bad Loan % 
-| MoM Changes
+---
 
+## 📈 KPIs Tracked
 
-🛠️ Tech Stack
+| KPI | Description |
+|-----|-------------|
+| Total Loan Applications | Number of loans applied |
+| Funded Amount | Approved loan amounts |
+| Received Amount | Repayment collected |
+| Average Interest Rate | Borrower cost measure |
+| Average DTI | Debt-to-Income risk |
+| Good vs. Bad Loan Ratio | Health of portfolio |
+| Month-over-Month Change | Lending performance trend |
 
-- Power BI – Visualization & dashboarding
-- SQL – Data extraction and aggregation
+---
 
+## 🛠️ Tech Stack
+
+| Tool | Purpose |
+|------|---------|
+| Power BI | Dashboarding and visualization |
+| SQL | Data extraction, joins, filtering, aggregations |
+| Python (Scikit-learn, imbalanced-learn, pandas) | ML pipeline |
+| Jupyter/Colab | Model training and evaluation |
+| SMOTE | Handling class imbalance |
+| Logistic Regression | Default risk prediction |
+
+---
+
+## 📂 Folder Structure
 
